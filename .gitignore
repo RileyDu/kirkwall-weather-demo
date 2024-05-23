@@ -39,4 +39,4 @@ build/
 .vscode/
 .idea/
 
-src/backend/Auth.js
+.Auth

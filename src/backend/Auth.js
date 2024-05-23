@@ -8,8 +8,8 @@ const AUTH_URL = 'https://api.devii.io/auth';
 async function getAccessToken() {
     // Create an object to store the form data with your Devii credentials
     const data = {
-        login: 'check two',
-        password: 'check two',
+        login: 'check three',
+        password: 'check three',
         tenantid: 10161,
     };
 

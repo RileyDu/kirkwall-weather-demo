@@ -39,4 +39,4 @@ build/
 .vscode/
 .idea/
 
-.Auth.js
+Auth.js

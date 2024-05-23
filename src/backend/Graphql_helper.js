@@ -26,13 +26,13 @@ async function executeGraphqlQuery(query, variables = {}) {
 // Function to retrieve all the list and item data
 async function getWeatherData() {
   const WeatherDataQuery = `
-    query
-        {
-        weather_data {
-            date
-            max_temperature
-            min_temperature
-        }
+  query {
+    weather_data {
+      date
+      max_temperature
+      min_temperature
+    }
+  }
      
     `;
   return executeGraphqlQuery(WeatherDataQuery);

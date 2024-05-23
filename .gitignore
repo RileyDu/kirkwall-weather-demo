@@ -38,3 +38,5 @@ build/
 # Ignore IDE files
 .vscode/
 .idea/
+
+src/backend/Auth.js

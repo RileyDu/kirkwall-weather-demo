@@ -1,6 +1,5 @@
 // Helper functions for GraphQL queries and mutations
 import axios from 'axios';
-
 import { getAccessToken, setupAuthHeaders } from './Auth';
 
 const QUERY_URL = 'https://api.devii.io/query';
@@ -25,28 +24,18 @@ async function executeGraphqlQuery(query, variables = {}) {
 }
 
 // Function to retrieve all the list and item data
-async function getListData() {
-  const ListDataQuery = `
+async function getWeatherData() {
+  const WeatherDataQuery = `
     query
         {
-        list {
-            listid
-            listname
-            status_value {
-            statusid
-            statusname
-            }
-            item_collection {
-            itemid
-            itemname
-            statusid
-            status_value{statusname}
-            }
-        }
+        weather_data {
+            date
+            max_temperature
+            min_temperature
         }
      
     `;
-  return executeGraphqlQuery(ListDataQuery);
+  return executeGraphqlQuery(WeatherDataQuery);
 }
 
 
@@ -137,4 +126,4 @@ async function editItem(itemId, newName, listId, statusId) {
 
 
 // Export the functions to be used elsewhere in the project
-export { getListData,editItem,addItem };
+export { getWeatherData,editItem,addItem };
